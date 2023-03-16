@@ -6,7 +6,7 @@ function updateBanner(slides, currentSlide, bannerElements) {
 		if (i !== currentSlide) dots[i].classList.remove('dot_selected');
 		else dots[i].classList.add('dot_selected');
 	}
-	console.log(slide);
+	
 	if (slide) {
 		bannerElements.img.src = `${imageDirectory}/${slide.image}`;
 		bannerElements.tagLine.innerHTML = slide.tagLine;
