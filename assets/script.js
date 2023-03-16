@@ -46,13 +46,15 @@ let currentSlide = 0;
 
 
 for (let i = 0; i < slides.length; i += 1) {
-	const dot = document.createElement('dit');
+	const dot = document.createElement('div');
 	dot.classList.add('dot');
 	if (i === currentSlide) {
 		dot.classList.add('dot_selected');
 	}
 	dots.appendChild(dot);
 }
+
+updateBanner(slides, currentSlide, bannerElements);
 
 arrowLeft.addEventListener('click', () => {
 	currentSlide = currentSlide -1 >= 0 ? currentSlide - 1 : slides.length - 1;
